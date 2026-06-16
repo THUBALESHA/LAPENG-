@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lapeng Aged Care & Support Centre</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f6f8;
+color:#222;
+line-height:1.7;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0A3D62;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+color:#fff;
+font-size:22px;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#D4A017;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(10,61,98,.75),rgba(10,61,98,.75)),
+url('https://images.unsplash.com/photo-1516307365426-bea591f05011?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+color:white;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.hero-btn{
+display:inline-block;
+background:#D4A017;
+color:white;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.hero-btn:hover{
+background:#b88a0f;
+transform:translateY(-3px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:38px;
+color:#0A3D62;
+margin-bottom:50px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.about-text{
+font-size:18px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+color:#0A3D62;
+margin-bottom:15px;
+}
+
+.rights{
+background:#0A3D62;
+color:white;
+text-align:center;
+border-radius:20px;
+padding:60px;
+}
+
+.rights h2{
+margin-bottom:20px;
+font-size:40px;
+}
+
+.rights ul{
+list-style:none;
+max-width:800px;
+margin:auto;
+}
+
+.rights li{
+padding:10px;
+font-size:18px;
+}
+
+.motivation{
+background:#D4A017;
+color:white;
+padding:60px;
+text-align:center;
+border-radius:20px;
+}
+
+.motivation h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.donation-form{
+max-width:700px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.donation-form input,
+.donation-form textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.donation-form button{
+width:100%;
+padding:15px;
+border:none;
+background:#0A3D62;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.comment-box{
+max-width:800px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.comment-box input,
+.comment-box textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.comment-box button{
+background:#D4A017;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.comment{
+background:#f5f5f5;
+padding:15px;
+margin-top:15px;
+border-radius:10px;
+}
+
+footer{
+background:#0A3D62;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+footer h3{
+margin-bottom:10px;
+}
+
+@media(max-width:900px){
+
+nav{
+padding:15px 20px;
+}
+
+nav ul{
+display:none;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">LAPENG AGED CARE & SUPPORT CENTRE</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#rights">Rights</a></li>
+<li><a href="#donate">Donate</a></li>
+<li><a href="#comments">Comments</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+
+<h1>Lapeng Aged Care & Support Centre</h1>
+
+<p>
+Providing dignity, protection, recreation, companionship,
+and support services for older persons in South Africa.
+</p>
+
+<a href="#about" class="hero-btn">Learn More</a>
+
+</div>
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Lapeng</h2>
+
+<div class="about">
+
+<img src="1.jpg">
+
+<img src="2.png">
+
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop">
+
+<img src="3.png">
+
+
+
+
+<div class="about-text">
+
+<p>
+Lapeng Aged Care & Support Centre is committed to improving
+the quality of life of older persons through care,
+recreation, social engagement, emotional support,
+and protection from abuse and neglect.
+</p>
+
+<br>
+
+<p>
+We promote the rights of older persons under South Africa's
+Older Persons Act and create safe spaces where senior
+citizens can enjoy meaningful lives, remain active,
+and feel valued in society.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Recreational Activities</h3>
+<p>
+Games, exercise programmes, music, arts, crafts,
+community gatherings and social events.
+</p>
+</div>
+
+<div class="card">
+<h3>Emotional Support</h3>
+<p>
+Guidance, counselling referrals, companionship and
+community support for older persons.
+</p>
+</div>
+
+<div class="card">
+<h3>Protection Against Abuse</h3>
+<p>
+Awareness programmes and support for reporting
+elder abuse, neglect and exploitation.
+</p>
+</div>
+
+<div class="card">
+<h3>Health & Wellness</h3>
+<p>
+Wellness education, healthy living programmes and
+community health awareness initiatives.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="rights">
+
+<div class="rights">
+
+<h2>Rights of Older Persons</h2>
+
+<ul>
+<li>✓ The right to dignity and respect.</li>
+<li>✓ Freedom from abuse, neglect and exploitation.</li>
+<li>✓ Access to support and care services.</li>
+<li>✓ Participation in community activities.</li>
+<li>✓ Equal treatment without discrimination.</li>
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="motivation">
+
+<h2>Message of Hope</h2>
+
+<p>
+"Every older person carries wisdom, experience and value.
+Together we can create caring communities where every
+senior citizen feels respected, protected and appreciated."
+</p>
+
+</div>
+
+<div>
+
+<video autoplay muted loop playsinline>
+    <source src="mathuso.mp4" type="video/mp4">
+</video>
+
+</div>
+</section>
+
+<section id="donate">
+
+<h2 class="section-title">Support Our Mission</h2>
+
+<div class="donation-form">
+
+<form onsubmit="sendDonation(event)">
+
+<input type="text" id="donorName" placeholder="Full Name" required>
+
+<input type="email" id="donorEmail" placeholder="Email Address" required>
+
+<input type="number" id="donationAmount" placeholder="Donation Amount (R)" required>
+
+<textarea id="donorMessage" rows="5" placeholder="Leave a message"></textarea>
+
+<button type="submit">Donate Now</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section id="comments">
+
+<h2 class="section-title">Community Comments</h2>
+
+<div class="comment-box">
+
+<input type="text" id="commentName" placeholder="Your Name">
+
+<textarea id="commentText" rows="5" placeholder="Share your message"></textarea>
+
+<button onclick="addComment()">Post Comment</button>
+
+<div id="commentsList">
+
+<div class="comment">
+<strong>Community Member:</strong>
+<p>
+Thank you for caring for our elders and protecting their dignity.
+</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>LAPENG AGED CARE & SUPPORT CENTRE</h3>
+
+<p>
+Supporting Older Persons • Promoting Active Ageing • Protecting Rights
+</p>
+
+<p>
+© 2026 Lapeng Aged Care & Support Centre
+</p>
+
+</footer>
+
+<script>
+
+function addComment(){
+
+let name=document.getElementById("commentName").value;
+let text=document.getElementById("commentText").value;
+
+if(name==="" || text===""){
+alert("Please complete all fields");
+return;
+}
+
+let comment=document.createElement("div");
+comment.classList.add("comment");
+
+comment.innerHTML=
+"<strong>"+name+":</strong><p>"+text+"</p>";
+
+document.getElementById("commentsList").prepend(comment);
+
+document.getElementById("commentName").value="";
+document.getElementById("commentText").value="";
+}
+
+function sendDonation(e){
+
+e.preventDefault();
+
+let name=document.getElementById("donorName").value;
+let amount=document.getElementById("donationAmount").value;
+
+alert(
+"Thank you "+name+
+" for supporting Lapeng with R"+amount+
+". You will be redirected to the donation page."
+);
+
+setTimeout(function(){
+
+window.location.href="https://www.paypal.com";
+
+},3000);
+
+}
+
+</script>
+
+</body>
+</html>
